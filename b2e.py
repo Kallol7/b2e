@@ -63,7 +63,7 @@ def b2e(text=None, headers=None, default_headers=False, ipa=False):
 
 
     if text is None:
-        text = input("Enter link: ")
+        text = input("Enter Bengali Text: ")
     
     if default_headers:
         headers = b2e_default_headers
@@ -78,5 +78,6 @@ def b2e(text=None, headers=None, default_headers=False, ipa=False):
         resp_str = re.sub(key, value, resp_str)
     return resp_str
 
-if __name__=="main":
-    b2e()
+if __name__=="__main__":
+    result = b2e()
+    print(result)
